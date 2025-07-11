@@ -8,7 +8,6 @@
         <PackageProjectUrl>https://github.com/DuncanMcPherson/semantic-changelog</PackageProjectUrl>
         <RepositoryUrl>https://github.com/DuncanMcPherson/semantic-changelog</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageTags>release</PackageTags>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>

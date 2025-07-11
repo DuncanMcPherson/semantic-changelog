@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using SemanticRelease.Abstractions;
 
 namespace SemanticRelease.Changelog
@@ -8,6 +9,11 @@ namespace SemanticRelease.Changelog
         public void Register(SemanticLifecycle lifecycle)
         {
             throw new NotImplementedException();
+        }
+
+        private async Task WriteChangelogAsync(ReleaseContext context)
+        {
+            
         }
     }
 }
