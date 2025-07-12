@@ -30,8 +30,9 @@ namespace SemanticRelease.Changelog
 
             // Non-null safe access is safe here because the PluginConfigs dictionary must be present, populated,
             // and have a key: 'SemanticRelease.Changelog' in order for this plugin to be loaded
-            var fileName = context.Config.PluginConfigs!["SemanticRelease.Changelog"] as ChangelogConfig;
-            var filePath = Path.Combine(context.WorkingDirectory, fileName!.ChangelogFile);
+            // Using null coalescing because the correspondent object could be null (plugin added by name only)
+            var fileName = context.Config.PluginConfigs!["SemanticRelease.Changelog"] as ChangelogConfig ?? new ChangelogConfig();
+            var filePath = Path.Combine(context.WorkingDirectory, fileName.ChangelogFile);
             
             var changelogExists = File.Exists(filePath);
             Console.WriteLine(changelogExists ? $"Updating {filePath}" : $"Creating {filePath}");
