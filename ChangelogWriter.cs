@@ -25,6 +25,7 @@ namespace SemanticRelease.Changelog
             {
                 Console.WriteLine("Dry run, no changes will be made");
                 Console.WriteLine($"{releaseNotesMd}");
+                return;
             }
 
             // Non-null safe access is safe here because the PluginConfigs dictionary must be present, populated,
