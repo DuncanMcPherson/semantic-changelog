@@ -13,7 +13,6 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "chmod +x ./scripts/build-and-pack.sh",
         "publishCmd": "./scripts/build-and-pack.sh ${nextRelease.version} '${nextRelease.notes}'"
       }
     ],
