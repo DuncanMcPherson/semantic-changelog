@@ -1,30 +1,18 @@
 {
-  "branches": ["master"],
+  "branches": [
+    "master"
+  ],
   "tagFormat": "v${version}",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    [
-      "@semantic-release/changelog",
-      {
-        "changelogFile": "CHANGELOG.md"
-      }
-    ],
     [
       "@semantic-release/exec",
       {
         "publishCmd": "./scripts/build-and-pack.sh ${nextRelease.version} '${nextRelease.notes}'"
       }
     ],
-    [
-      "@semantic-release/git",
-      {
-        "assets": [
-          "CHANGELOG.md"
-        ],
-        "message": "chore: v${nextRelease.version} [skip ci]"
-      }
-    ],
+    "@semantic-release/git",
     [
       "@semantic-release/github",
       {
